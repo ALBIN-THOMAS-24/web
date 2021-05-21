@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="style.css"></link>
+  <script src="app.js" charset="utf-8"></script>
+  
+  
+</head>
+<body>
+	
+  <h3>Score:<span id="result"></span></h3>
+
+  <div class="grid">
+  </div>
+<p>Total Time:</p>
+<p id="demo">0</p>
+
+<script>
+function changeValue() {
+	if(value==19)
+  {
+  	stop()
+  	
+  }
+  document.getElementById("demo").innerHTML = ++value;
+}
+
+var timerInterval = null;
+function start() {
+ 
+  value = 0;
+  timerInterval = setInterval(changeValue, 1000);  
+  
+}
+function stop() {
+ 
+   clearTimeout(timerInterval);
+
+ 
+}
+start()
+
+</script>
+</body>
+</html>
